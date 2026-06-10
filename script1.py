@@ -1,29 +1,5 @@
-import random
+number = int(input("Enter a Bottom number: "))
+table_number = int(input("Enter a table number: "))
 
-while True:
-    print("1. Start")
-    print("2. End")
-    option = int(input("Enter a Option: "))
-    if option == 2:
-        break
-    else:
-        random_number = random.randint(1, 10)
-        attempt=0
-        while True:
-            number = int(input("Enter a Number From 1 to 10: "))
-            if number == random_number:
-                # global attempt
-                print("You Won! you Won by ",attempt,"Attempts")
-                break
-            elif number > random_number:
-                # global attempt
-                attempt+=1
-                print("your Number is Higher !! Try Again")
-            elif number < random_number:
-                # global attempt
-                attempt+=1
-                print("your Number is Lower !! Try Again")
-
-
-
-
+for i in range(1, number + 1):
+    print(i,"x",table_number,"=",i*table_number)
